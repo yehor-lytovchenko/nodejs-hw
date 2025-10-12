@@ -1,0 +1,30 @@
+{
+  "name": "nodejs-hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yehor-lytovchenko/nodejs-hw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yehor-lytovchenko/nodejs-hw/issues"
+  },
+  "homepage": "https://github.com/yehor-lytovchenko/nodejs-hw#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.37.0",
+    "@eslint/json": "^0.13.2",
+    "eslint": "^9.37.0",
+    "globals": "^16.4.0",
+    "nodemon": "^3.1.10"
+  }
+}
