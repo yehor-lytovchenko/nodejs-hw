@@ -2,7 +2,7 @@ import createHttpError from 'http-errors';
 import { Session } from '../models/session.js';
 import { User } from '../models/user.js';
 
-export const authenticate = async (req, resizeBy, next) => {
+export const authenticate = async (req, res, next) => {
   if (!req.cookies.accessToken) {
     next(createHttpError(401, 'Missing access token'));
     return;
@@ -14,6 +14,7 @@ export const authenticate = async (req, resizeBy, next) => {
 
   if (!session) {
     next(createHttpError(401, 'Session not found'));
+    return;
   }
 
   const isAccessTokenExpired =
@@ -31,6 +32,5 @@ export const authenticate = async (req, resizeBy, next) => {
   }
 
   req.user = user;
-
   next();
 };

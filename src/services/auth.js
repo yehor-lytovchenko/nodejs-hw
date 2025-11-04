@@ -1,5 +1,6 @@
 import { FIFTEEN_MINUTES, ONE_DAY } from '../constants/time.js';
 import { Session } from '../models/session.js';
+import crypto from 'crypto';
 
 export const createSession = async (userId) => {
   const accessToken = crypto.randomBytes(30).toString('base64');
